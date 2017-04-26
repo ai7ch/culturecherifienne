@@ -12,14 +12,28 @@
  Text Domain:  dyad-child
 */
 
-@import url(../dyad/style.css);
-
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
+# Importing
 # Overriding theme default style
 #
 --------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Importing
+--------------------------------------------------------------*/
+@import url(../dyad/style.css);
+@font-face {
+    font-family: 'Genericons';
+    src: url('font/genericons-neue.eot');
+    src: url('font/genericons-neue.eot?#iefix') format('embedded-opentype'),
+         url('font/genericons-neue.woff2') format('woff2'),
+         url('font/genericons-neue.ttf') format('truetype'),
+         url('font/genericons-neue.svg#genericonsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /*--------------------------------------------------------------
 # Overriding theme default style
@@ -36,8 +50,70 @@
 	.widget-area a, .widget_search input {
 		font-family: "Libre Baskerville",serif;
 	}
+	.widget-title{
+		margin-bottom: 1rem;
+	}
 	.posts-navigation .nav-previous{
 		max-width: 275px;
 		margin: 0 auto;
 		float: none;
+	}
+	.search-social-subscribe{
+		width : 24.5%
+	}
+	.search-social-subscribe > .widget.widget_search,
+	.search-social-subscribe > .widget.widget_wpcom_social_media_icons_widget,
+	.search-social-subscribe > .subscribe.widget{
+		position : initial !important; left: initial !important; top: initial !important;
+		float: none; width: initial;
+		margin-bottom: 30px;
+	}
+	.genericon {
+	    font-size: 16px;
+	    vertical-align: top;
+	    text-align: center;
+	    -moz-transition: color .1s ease-in 0;
+	    -webkit-transition: color .1s ease-in 0;
+	    display: inline-block;
+	    font-family: "Genericons";
+	    font-style: normal;
+	    font-weight: normal;
+	    font-variant: normal;
+	    line-height: 1;
+	    text-decoration: inherit;
+	    text-transform: none;
+	    -moz-osx-font-smoothing: grayscale;
+	    -webkit-font-smoothing: antialiased;
+	    speak: none;
+	}
+	.widget_wpcom_social_media_icons_widget .genericon {
+	    font-family: 'Genericons';
+	}
+	.widget_wpcom_social_media_icons_widget ul {
+	    list-style-type: none;
+	    margin-left: 0;
+	}
+	.widget ul li {
+	    border-bottom: 1px solid #363b40;
+	    border-top: 1px solid #363b40;
+	    padding: 8px 0;
+	}
+	.widget_wpcom_social_media_icons_widget li {
+	    border: 0 none;
+	    display: inline;
+	    margin-right: 0.5em;
+	}
+	.widget_wpcom_social_media_icons_widget ul li {
+	    border: 0;
+	}
+	.widget_wpcom_social_media_icons_widget ul li a {
+	    -webkit-transition: opacity 0.3s;
+	    transition: opacity 0.3s;
+	}
+	.widget_wpcom_social_media_icons_widget li a {
+	    border: 0 none;
+	    text-decoration: none;
+	}
+	.widget_wysija_cont .wysija-submit{
+		margin-top: 0;
 	}
