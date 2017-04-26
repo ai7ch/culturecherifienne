@@ -13,3 +13,31 @@
 */
 
 @import url(../dyad/style.css);
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Overriding theme default style
+#
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Overriding theme default style
+--------------------------------------------------------------*/
+	.wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active h5, .wf-active h6,
+	.wf-active .widget h1, .wf-active .widget h2, .wf-active .widget h3, .wf-active .widget h4,
+	.wf-active .widget h5, .wf-active .widget h6, .entry-title.site-description, .site-title, .posts .entry-title,
+	.widget h3{
+		font-family: "Cinzel",serif;
+		font-weight: 400;
+		font-style: normal;
+	}
+	.wf-active body, #primary-menu, .posts .entry-content p, .posts .entry-content a, .posts-navigation .nav-previous a,
+	.widget-area a, .widget_search input {
+		font-family: "Libre Baskerville",serif;
+	}
+	.posts-navigation .nav-previous{
+		max-width: 275px;
+		margin: 0 auto;
+		float: none;
+	}
