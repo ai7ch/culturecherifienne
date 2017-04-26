@@ -12,41 +12,43 @@
 		</div><!-- #content -->
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
-			<?php if ( is_active_sidebar( 'sidebar-1' ) ) { ?>
-
-				<div class="widget-area <?php echo esc_attr( dyad_widget_column_class( 'sidebar-1' ) ); ?>" role="complementary">
-					<div class="grid-container">
-						<?php dynamic_sidebar( 'sidebar-1' ); ?>
-					</div><!-- .grid-container -->
-				</div><!-- #secondary -->
-
-			<?php } ?>
-
-			<div class="footer-bottom-info <?php if ( has_nav_menu( 'social' ) ) { echo 'has-social-menu'; } ?>">
-				<?php
-				if ( has_nav_menu( 'social' ) ) {
-					wp_nav_menu( array(
-						'theme_location'  => 'social',
-						'container'       => 'div',
-						'container_id'    => '',
-						'container_class' => 'social-links',
-						'menu_id'         => '',
-						'menu_class'      => 'social-links-items',
-						'depth'           => 1,
-						'link_before'     => '<span class="screen-reader-text">',
-						'link_after'      => '</span>',
-						'fallback_cb'     => '',
-					) );
-				}
-				?>
-
+			<div class="widget-area" role="complementary">
+				<div class="grid-container">
+					<div class="search-social-subscribe">
+						<?php 
+							the_widget('WP_Widget_Search');
+						?><!-- #search-box -->
+						<aside id="wpcom_social_media_icons_widget-3" class="widget widget_wpcom_social_media_icons_widget">
+							<h3 class="widget-title">Suivez-moi!</h3>
+							<ul>
+								<li>
+									<a href="https://www.facebook.com/Culture-Chérifienne-629853133756169/" class="genericon genericon-facebook" target="_blank"><span class="screen-reader-text">Voir le profil de Culture-Chérifienne-629853133756169 sur Facebook</span></a>
+								</li>
+								<li>
+									<a href="https://twitter.com/culture_cherif/" class="genericon genericon-twitter" target="_blank"><span class="screen-reader-text">Voir le profil de culture_cherif sur Twitter</span></a>
+								</li>
+								<li>
+									<a href="https://www.instagram.com/culture.cherifienne/" class="genericon genericon-instagram" target="_blank"><span class="screen-reader-text">Voir le profil de culture.cherifienne sur Instagram</span></a>
+								</li>
+								<li>
+									<a href="https://www.pinterest.com/culturecherif/" class="genericon genericon-pinterest" target="_blank"><span class="screen-reader-text">Voir le profil de culturecherif sur Pinterest</span></a>
+								</li>
+							</ul>
+						</aside> <!-- #wpcom_social_media_icons_widget -->
+						<div class="subscribe widget">
+							<h3 class="widget-title">Abonnez-vous à culture chérifienne</h3>
+							<?php echo do_shortcode('[wysija_form id="1"]'); ?>
+						</div> <!-- .subscribe -->
+					</div> <!-- .search-social-followMe -->
+				</div><!-- .grid-container -->
+			</div><!-- #secondary  {end widget area} -->
+			<div class="footer-bottom-info">
 				<div class="site-info">
 					<span>&copy; Culture Cherifienne 2015 - 2017 </span>
 					<span class="sep"> | </span>
 					<?php echo "CGU" ?>
 				</div><!-- .site-info -->
 			</div><!-- .footer-bottom-info -->
-
 		</footer><!-- #colophon -->
 
 	</div><!-- .site-inner -->
