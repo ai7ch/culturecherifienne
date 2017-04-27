@@ -41,7 +41,7 @@
 	.wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active h5, .wf-active h6,
 	.wf-active .widget h1, .wf-active .widget h2, .wf-active .widget h3, .wf-active .widget h4,
 	.wf-active .widget h5, .wf-active .widget h6, .entry-title.site-description, .site-title, .posts .entry-title,
-	.widget h3, .widget h2, .search-social-subscribe h2{
+	.widget h3, .widget h2{
 		font-family: "Cinzel",serif;
 		font-weight: 400;
 		font-style: normal;
@@ -58,19 +58,16 @@
 		margin: 0 auto;
 		float: none;
 	}
-	.search-social-subscribe{
+	.search-social-subscribe, .archive-categories{
 		width : 24.5%;
 		float: left;
 		text-align: left;
 		margin: 0 0 60px;
 	}
-	.search-social-subscribe h2{
-		padding: 0 30px;
-		color: #8c97a2;
-	}
 	.search-social-subscribe > .widget.widget_search,
 	.search-social-subscribe > .widget.widget_wpcom_social_media_icons_widget,
-	.search-social-subscribe > .subscribe.widget{
+	.search-social-subscribe > .subscribe.widget, .archive-categories > .widget.widget_archive,
+	.archive-categories > .widget.widget_categories{
 		position : initial !important; left: initial !important; top: initial !important;
 		float: none; width: initial;
 		margin-bottom: 30px;
@@ -123,4 +120,18 @@
 	}
 	.widget_wysija_cont .wysija-submit{
 		margin-top: 0;
+	}
+	.archive-categories > .widget.widget_archive{
+		float: none;
+	}
+	.archive-categories select{
+		border: 1px solid #4d545b;
+	    color: inherit;
+	    font-family: inherit;
+	    font-size: 1.6rem;
+	    line-height: 1.5;
+	    max-width: 100%;
+	    outline: 0;
+	    padding: .62em;
+	    vertical-align: baseline;
 	}
