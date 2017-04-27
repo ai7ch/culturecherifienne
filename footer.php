@@ -64,12 +64,12 @@
 						<h2>Pinterest</h2>
 						<a data-pin-do="embedUser" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://fr.pinterest.com/culturecherif/"></a>
 						<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
-					</div>
+					</div> <!-- .pinterest-profile -->
 				</div><!-- .grid-container -->
 			</div><!-- #secondary  {end widget area} -->
 			<div class="footer-bottom-info">
 				<div class="site-info">
-					<span>&copy; Culture Cherifienne 2015 - 2017 </span>
+					<span>&copy; Culture Cherifienne 2014 - <?=get_current_year(); ?> </span>
 					<span class="sep"> | </span>
 					<?php echo "CGU" ?>
 				</div><!-- .site-info -->
