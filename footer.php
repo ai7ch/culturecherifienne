@@ -15,9 +15,8 @@
 			<div class="widget-area" role="complementary">
 				<div class="grid-container">
 					<div class="search-social-subscribe">
-						<h2>Recherche</h2>
 						<?php 
-							the_widget('WP_Widget_Search');
+							the_widget('WP_Widget_Search',array('title'=>'Recherche'));
 						?><!-- #search-box -->
 						<aside id="wpcom_social_media_icons_widget-3" class="widget widget_wpcom_social_media_icons_widget">
 							<h3 class="widget-title">Suivez-moi!</h3>
@@ -42,8 +41,26 @@
 						</div> <!-- .subscribe -->
 					</div> <!-- .search-social-subscribe -->
 					<?php 
-						the_widget('WP_Widget_Recent_Posts','Articles récents') 
+						the_widget('WP_Widget_Recent_Posts',array(
+							'title'		=>	'Articles récents',
+							'number'	=>	5
+						)) 
 					?> <!-- .article-recents -->
+					<div class="archive-categories">
+						<?php 
+							the_widget('WP_Widget_Categories',array(
+								'title'		=>	'Catégories',
+								'dropdown'	=>	1
+							));
+						?> <!-- .categories -->
+						<?php 
+							the_widget('WP_Widget_Archives',array(
+								'title'		=>	'Archives',
+								'dropdown'	=>	1
+							));
+						?> <!-- .archives -->
+					</div> <!-- .archive-categories -->
+					
 				</div><!-- .grid-container -->
 			</div><!-- #secondary  {end widget area} -->
 			<div class="footer-bottom-info">
