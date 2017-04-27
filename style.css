@@ -17,6 +17,7 @@
 ----------------------------------------------------------------
 # Importing
 # Overriding theme default style
+	# About me :: page
 # Media Queries
 --------------------------------------------------------------*/
 
@@ -145,16 +146,35 @@
 		border-radius: 50% !important;
 		width: 229px;
 	}
+	/****************** 
+	* ABOUT ME :: PAGE
+	*******************/
+	.is-singular.has-post-thumbnail:not(.home):not(.page-template-eventbrite-index) .widget-area{
+
+	}
+	.has-post-thumbnail.is-singular:not(.home):not(.single-format-image):not(.page-template-eventbrite-index) .widget-area .search-social-subscribe .widget,
+	.has-post-thumbnail.is-singular:not(.home):not(.single-format-image):not(.page-template-eventbrite-index) .widget-area .archive-categories .widget{
+		width: 100%;
+	}
+	.is-singular.has-post-thumbnail:not(.home):not(.page-template-eventbrite-index) .widget-area .search-social-subscribe,
+	.is-singular.has-post-thumbnail:not(.home):not(.page-template-eventbrite-index) .widget-area .widget_recent_entries,
+	.is-singular.has-post-thumbnail:not(.home):not(.page-template-eventbrite-index) .widget-area .archive-categories,
+	.is-singular.has-post-thumbnail:not(.home):not(.page-template-eventbrite-index) .widget-area .pinterest-profile{
+		width: 50% ;
+		float: left;
+		height: 450px;
+	}
 
 /*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
 	@media only screen and (max-width: 760px){
 		
-		.search-social-subscribe, .archive-categories, .pinterest-profile,  .widget.widget_recent_entries{
-			width : 100%;
+		.search-social-subscribe, .archive-categories, .pinterest-profile,  .widget.widget_recent_entries,
+		.widget-area .widget {
+			width : 100% !important;
+			height: auto !important;
 			float: none;
-			height: auto;
 		}
 		.pinterest-profile{
 			padding-right: 30px;
@@ -165,11 +185,22 @@
 		}
 	}
 
+	@media (width: 955px){
+		.search-social-subscribe, .archive-categories, .pinterest-profile,  .widget.widget_recent_entries,
+		.widget-area .widget{
+			min-width : 50%;
+			min-height: 450px;
+			float: left;
+			height: auto;
+		}
+	}
+	
 	@media only screen and (min-width: 960px) and (max-width: 961px){
 		.search-social-subscribe, .archive-categories, .pinterest-profile,  .widget.widget_recent_entries{
 			min-width : 50%;
 			min-height: 450px;
 			float: left;
+			height: auto;
 		}
 	}
 
@@ -177,10 +208,12 @@
 		.search-social-subscribe, .archive-categories, .pinterest-profile,  .widget.widget_recent_entries{
 			min-width : 25%;
 			float: left;
+			height: auto;
 		}
 		.pinterest-profile{
 			float: left;
 			width: 100%;
+			height: auto;
 		}
 	}
 
