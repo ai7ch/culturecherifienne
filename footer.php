@@ -15,6 +15,7 @@
 			<div class="widget-area" role="complementary">
 				<div class="grid-container">
 					<div class="search-social-subscribe">
+						<h2>Recherche</h2>
 						<?php 
 							the_widget('WP_Widget_Search');
 						?><!-- #search-box -->
@@ -39,7 +40,10 @@
 							<h3 class="widget-title">Abonnez-vous à culture chérifienne</h3>
 							<?php echo do_shortcode('[wysija_form id="1"]'); ?>
 						</div> <!-- .subscribe -->
-					</div> <!-- .search-social-followMe -->
+					</div> <!-- .search-social-subscribe -->
+					<?php 
+						the_widget('WP_Widget_Recent_Posts','Articles récents') 
+					?> <!-- .article-recents -->
 				</div><!-- .grid-container -->
 			</div><!-- #secondary  {end widget area} -->
 			<div class="footer-bottom-info">
