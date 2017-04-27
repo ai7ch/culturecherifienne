@@ -17,23 +17,23 @@
 ----------------------------------------------------------------
 # Importing
 # Overriding theme default style
-#
+# Media Queries
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Importing
 --------------------------------------------------------------*/
-@import url(../dyad/style.css);
-@font-face {
-    font-family: 'Genericons';
-    src: url('font/genericons-neue.eot');
-    src: url('font/genericons-neue.eot?#iefix') format('embedded-opentype'),
-         url('font/genericons-neue.woff2') format('woff2'),
-         url('font/genericons-neue.ttf') format('truetype'),
-         url('font/genericons-neue.svg#genericonsregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+	@import url(../dyad/style.css);
+	@font-face {
+	    font-family: 'Genericons';
+	    src: url('font/genericons-neue.eot');
+	    src: url('font/genericons-neue.eot?#iefix') format('embedded-opentype'),
+	         url('font/genericons-neue.woff2') format('woff2'),
+	         url('font/genericons-neue.ttf') format('truetype'),
+	         url('font/genericons-neue.svg#genericonsregular') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+	}
 
 /*--------------------------------------------------------------
 # Overriding theme default style
@@ -41,22 +41,22 @@
 	.wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active h5, .wf-active h6,
 	.wf-active .widget h1, .wf-active .widget h2, .wf-active .widget h3, .wf-active .widget h4,
 	.wf-active .widget h5, .wf-active .widget h6, .entry-title.site-description, .site-title, .posts .entry-title,
-	.widget h3, .widget h2, .pinterest-profile h2{
+	.widget h3, .widget h2, .pinterest-profile h2, .entry-title, .entry-content h3 {
 		font-family: "Cinzel",serif;
 		font-weight: 400;
 		font-style: normal;
 	}
 	.wf-active body, #primary-menu, .posts .entry-content p, .posts .entry-content a, .posts-navigation .nav-previous a,
-	.widget-area a, .widget_search input {
+	.widget-area a, .widget_search input, .entry-meta a, .entry-posted, .entry-content{
 		font-family: "Libre Baskerville",serif;
+	}
+	.nav-links{
+		overflow: hidden;
+	    max-width: 550px;
+	    margin: 0 auto;
 	}
 	.widget-title{
 		margin-bottom: 1rem;
-	}
-	.posts-navigation .nav-previous{
-		max-width: 275px;
-		margin: 0 auto;
-		float: none;
 	}
 	.search-social-subscribe, .archive-categories, .pinterest-profile{
 		width : 24.5%;
@@ -140,4 +140,57 @@
 	}
 	.pinterest-profile h2{
 		color: #8c97a2;
+	}
+	.gallery-icon img{
+		border-radius: 50% !important;
+		width: 229px;
+	}
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+	@media only screen and (max-width: 760px){
+		
+		.search-social-subscribe, .archive-categories, .pinterest-profile,  .widget.widget_recent_entries{
+			width : 100%;
+			float: none;
+			height: auto;
+		}
+		.pinterest-profile{
+			padding-right: 30px;
+		}
+		.pinterest-profile > span{
+			max-width: 100% !important;
+			width: 100% !important;
+		}
+	}
+
+	@media only screen and (min-width: 960px) and (max-width: 961px){
+		.search-social-subscribe, .archive-categories, .pinterest-profile,  .widget.widget_recent_entries{
+			min-width : 50%;
+			min-height: 450px;
+			float: left;
+		}
+	}
+
+	@media only screen and (width: 1200px){
+		.search-social-subscribe, .archive-categories, .pinterest-profile,  .widget.widget_recent_entries{
+			min-width : 25%;
+			float: left;
+		}
+		.pinterest-profile{
+			float: left;
+			width: 100%;
+		}
+	}
+
+	@media only screen and (width: 1400px){
+		.search-social-subscribe, .archive-categories, .pinterest-profile,  .widget.widget_recent_entries{
+			min-width : 30%;
+			float: left;
+		}
+		.pinterest-profile{
+			float: left;
+			width: 100%;
+		}
 	}
