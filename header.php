@@ -18,6 +18,8 @@
 <!-- theme-child embedded style -->
 	<!-- Google fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Cinzel|Libre+Baskerville" rel="stylesheet">
+	<!-- MailChimp -->
+	<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css3" rel="stylesheet" type="text/css">
 <!-- end theme-child embedded style -->
 
 <?php wp_head(); ?>

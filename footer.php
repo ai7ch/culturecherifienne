@@ -37,7 +37,31 @@
 						</aside> <!-- #wpcom_social_media_icons_widget -->
 						<div class="subscribe widget">
 							<h3 class="widget-title">Abonnez-vous à culture chérifienne</h3>
-							<?php echo do_shortcode('[wysija_form id="1"]'); ?>
+							<!-- Begin MailChimp Signup Form -->
+							<div id="mc_embed_signup">
+								<form action="//wordpress.us13.list-manage.com/subscribe/post?u=817e9ae19ff7148c87f94a39b&amp;id=b9fa4e4416" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+								    <div id="mc_embed_signup_scroll">
+										<div class="mc-field-group">
+											<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="E-mail">
+										</div>
+										<div id="mce-responses" class="clear">
+											<div class="response" id="mce-error-response" style="display:none"></div>
+											<div class="response" id="mce-success-response" style="display:none"></div>
+										</div>    
+										<?php 
+											/*
+												real people should not fill this in and expect good things - 
+												do not remove this or risk form bot signups
+											*/
+										?>
+										<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_817e9ae19ff7148c87f94a39b_b9fa4e4416" tabindex="-1" value=""></div>
+										<div class="clear subscribe-button">
+											<input type="submit" value="S'abonner" name="subscribe" id="mc-embedded-subscribe" class="button">
+										</div>
+								    </div>
+								</form>
+							</div>
+							<!--End mc_embed_signup-->
 						</div> <!-- .subscribe -->
 					</div> <!-- .search-social-subscribe -->
 					<?php 
@@ -70,8 +94,6 @@
 			<div class="footer-bottom-info">
 				<div class="site-info">
 					<span>&copy; Culture Cherifienne 2014 - <?=get_current_year(); ?> </span>
-					<span class="sep"> | </span>
-					<?php echo "CGU" ?>
 				</div><!-- .site-info -->
 			</div><!-- .footer-bottom-info -->
 		</footer><!-- #colophon -->
@@ -80,6 +102,38 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+
+<!-- Custom child-theme js scripts -->
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+<script type='text/javascript'>
+	(function($) {
+		window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text'; /*
+	 * Translated default messages for the $ validation plugin.
+	 * Locale: FR
+	 */
+	$.extend(
+		$.validator.messages, {
+	        required: "Ce champ est requis.",
+	        remote: "Veuillez remplir ce champ pour continuer.",
+	        email: "Veuillez entrer une adresse email valide.",
+	        url: "Veuillez entrer une URL valide.",
+	        date: "Veuillez entrer une date valide.",
+	        dateISO: "Veuillez entrer une date valide (ISO).",
+	        number: "Veuillez entrer un nombre valide.",
+	        digits: "Veuillez entrer (seulement) une valeur numérique.",
+	        creditcard: "Veuillez entrer un numéro de carte de crédit valide.",
+	        equalTo: "Veuillez entrer une nouvelle fois la même valeur.",
+	        accept: "Veuillez entrer une valeur avec une extension valide.",
+	        maxlength: $.validator.format("Veuillez ne pas entrer plus de {0} caractères."),
+	        minlength: $.validator.format("Veuillez entrer au moins {0} caractères."),
+	        rangelength: $.validator.format("Veuillez entrer entre {0} et {1} caractères."),
+	        range: $.validator.format("Veuillez entrer une valeur entre {0} et {1}."),
+	        max: $.validator.format("Veuillez entrer une valeur inférieure ou égale à {0}."),
+	        min: $.validator.format("Veuillez entrer une valeur supérieure ou égale à {0}.")
+		}
+	);}(jQuery));
+	var $mcj = jQuery.noConflict(true);
+</script>
 
 </body>
 </html>
