@@ -39,25 +39,26 @@
 							<h3 class="widget-title">Abonnez-vous à culture chérifienne</h3>
 							<!-- Begin MailChimp Signup Form -->
 							<div id="mc_embed_signup">
-								<form action="//wordpress.us13.list-manage.com/subscribe/post?u=817e9ae19ff7148c87f94a39b&amp;id=b9fa4e4416" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+								<form action="//wordpress.us13.list-manage.com/subscribe/post?u=817e9ae19ff7148c87f94a39b&amp;id=5d3d8be65b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 								    <div id="mc_embed_signup_scroll">
+									
 										<div class="mc-field-group">
 											<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="E-mail">
 										</div>
 										<div id="mce-responses" class="clear">
 											<div class="response" id="mce-error-response" style="display:none"></div>
 											<div class="response" id="mce-success-response" style="display:none"></div>
-										</div>    
+										</div>   
 										<?php 
 											/*
 												real people should not fill this in and expect good things - 
 												do not remove this or risk form bot signups
 											*/
 										?>
-										<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_817e9ae19ff7148c87f94a39b_b9fa4e4416" tabindex="-1" value=""></div>
-										<div class="clear subscribe-button">
-											<input type="submit" value="S'abonner" name="subscribe" id="mc-embedded-subscribe" class="button">
-										</div>
+										<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_817e9ae19ff7148c87f94a39b_5d3d8be65b" tabindex="-1" value=""></div>
+									    <div class="clear subscribe-button">
+									    	<input type="submit" value="S'abonner" name="subscribe" id="mc-embedded-subscribe" class="button">
+									    </div>
 								    </div>
 								</form>
 							</div>
@@ -134,6 +135,11 @@
 	);}(jQuery));
 	var $mcj = jQuery.noConflict(true);
 </script>
-
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+<script type="text/javascript">
+	require(["mojo/signup-forms/Loader"], function(L) { 
+		L.start({"baseUrl":"mc.us13.list-manage.com","uuid":"817e9ae19ff7148c87f94a39b","lid":"5d3d8be65b"}) 
+	})
+</script>
 </body>
 </html>
